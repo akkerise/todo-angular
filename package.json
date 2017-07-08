@@ -1,0 +1,39 @@
+{
+  "name": "todo-angular",
+  "version": "1.0.0",
+  "description": "Todo App AngularJS 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akkerise/todo-angular.git"
+  },
+  "keywords": [
+    "todo-angular"
+  ],
+  "author": "AkKeRise",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akkerise/todo-angular/issues"
+  },
+  "homepage": "https://github.com/akkerise/todo-angular#readme",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify": "^1.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "imagemin-pngquant": "^5.0.1",
+    "materialize-css": "^0.99.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1"
+  }
+}

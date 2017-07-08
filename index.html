@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoAngular">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="container" ng-controller="todoAngularController">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="center" id="title">
+                    <h4>Todo AngularJS</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s2 m4">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title">NEW</span>
+                            <input id="inputText" type="text" ng-model="inputTextNew" class="validate"
+                                   ng-keypress="($event.keyCode === 13) ? addTask(inputTextNew,'new') : false"
+                                   placeholder="Input text here ...">
+                        </div>
+
+                        <div id="sortable1" class="connectedSortable">
+                            <div class="collection" ng-repeat="objNew in objNews">
+                                <a class="collection-item">{{ objNew.task }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s2 m4">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title">DOING</span>
+                            <input type="text" ng-model="inputTextDoing" class="validate"
+                                   ng-keypress="($event.keyCode === 13) ? addTask(inputTextDoing, 'doing') : false"
+                                   placeholder="Input text here ...">
+                        </div>
+
+                        <div id="sortable2" class="connectedSortable">
+                            <div class="collection" ng-repeat="objDoing in objDoings">
+                                <a class="collection-item">{{ objDoing.task }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s2 m4">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title">DONE</span>
+                            <input type="text" ng-model="inputTextDone" class="validate"
+                                   ng-keypress="($event.keyCode === 13) ? addTask(inputTextDone, 'done') : false"
+                                   placeholder="Input text here ...">
+                        </div>
+                        <div id="sortable3" class="connectedSortable" >
+                            <div class="collection" ng-repeat="objDone in objDones">
+                                <a class="collection-item">{{ objDone.task }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="center">
+                    <button class="btn btn-flat waves-effect" style="border: 1px solid grey;"
+                            ng-click="elChange(this)">TestClick
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+</html>
+
+<script>
+    $(function () {
+        $(".connectedSortable").sortable({
+            connectWith: ".connectedSortable",
+            placeholder: "ui-state-highlight",
+//            start: function (event, ui) {
+//                $(ui.item[0].addClass('dragging'))
+//            },
+//            stop: function (event, ui) {
+//                $(ui.item[0].removeClass('dragging'))
+//            }
+        });
+    });
+</script>

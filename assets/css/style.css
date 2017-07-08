@@ -1,0 +1,22 @@
+.col-md-10 .row #title {
+  font-family: "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  color: #3D9970;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.col-md-10 .row .card .card-content span.card-title {
+  color: #3D9970;
+  border-bottom: 1px solid #3D9970;
+  margin-bottom: 20px; }
+
+.col-md-10 .row .card .card-content input {
+  color: black; }
+
+.col-md-10 .row .card .card-action a#edit {
+  background: #DDDDDD;
+  color: #FF851B; }
+
+.col-md-10 .row .card .card-action a#delete {
+  background: #DDDDDD;
+  color: #FF4136; }
