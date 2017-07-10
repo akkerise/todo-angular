@@ -1,6 +1,6 @@
-# todo-angular
+# Todo List by AngularJS 1
 
-## Steps command with terminal:
+## Steps command with terminal :
 1. git clone https://github.com/akkerise/todo-angular.git
 2. cd todo-angular
 3. npm install
@@ -11,4 +11,6 @@
 1. Email : nguyenthanh.rise.88@gmail.com.
 2. Phone Number : 0968381829.
 
-## Thanks for Best Regards
+#### Thanks for Best Regards
+#### License : Google , MIT
+#### Version Angular : Angular JS version 1

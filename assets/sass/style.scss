@@ -18,15 +18,19 @@
           color: black;
         }
       }
-      .card-action {
-        a {
-          &#edit {
-            background: #DDDDDD;
-            color: #FF851B;
+      .collection {
+        margin: 0;
+        span {
+          &.badge {
+            &:hover {
+              color: #000000;
+            }
           }
-          &#delete {
-            background: #DDDDDD;
-            color: #FF4136;
+          i.small {
+            cursor: pointer;
+            &:active {
+              color: #0b3e6f;
+            }
           }
         }
       }

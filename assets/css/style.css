@@ -13,10 +13,11 @@
 .col-md-10 .row .card .card-content input {
   color: black; }
 
-.col-md-10 .row .card .card-action a#edit {
-  background: #DDDDDD;
-  color: #FF851B; }
-
-.col-md-10 .row .card .card-action a#delete {
-  background: #DDDDDD;
-  color: #FF4136; }
+.col-md-10 .row .card .collection {
+  margin: 0; }
+  .col-md-10 .row .card .collection span.badge:hover {
+    color: #000000; }
+  .col-md-10 .row .card .collection span i.small {
+    cursor: pointer; }
+    .col-md-10 .row .card .collection span i.small:active {
+      color: #0b3e6f; }

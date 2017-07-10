@@ -28,7 +28,8 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^3.1.0",
     "imagemin-pngquant": "^5.0.1",
-    "materialize-css": "^0.99.0"
+    "materialize-css": "^0.99.0",
+    "wreck": "^12.2.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",

@@ -10,6 +10,7 @@ dependencies:
   jquery: 3.2.1
   jquery-ui: 1.12.1
   materialize-css: 0.99.0
+  wreck: 12.2.2
 packages:
   /abbrev/1.1.0:
     resolution:
@@ -226,6 +227,11 @@ packages:
       hoek: 2.16.3
     resolution:
       integrity: sha1-OciRjO/1eZ+D+UkqhI9iWt0Mdm8=
+  /boom/5.1.0:
+    dependencies:
+      hoek: 4.1.1
+    resolution:
+      integrity: sha1-Awj6jpJM1tQtnDv0iDvcmPDnHfg=
   /brace-expansion/1.1.8:
     dependencies:
       balanced-match: 1.0.0
@@ -1387,6 +1393,9 @@ packages:
   /hoek/2.16.3:
     resolution:
       integrity: sha1-ILt0A9POo5jpHcRxCo/xuCdKJe0=
+  /hoek/4.1.1:
+    resolution:
+      integrity: sha1-nMVz/7ore0CPtenCoTeWvpTN3Ok=
   /homedir-polyfill/1.0.1:
     dependencies:
       parse-passwd: 1.0.0
@@ -3294,6 +3303,12 @@ packages:
   /wrappy/1.0.2:
     resolution:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+  /wreck/12.2.2:
+    dependencies:
+      boom: 5.1.0
+      hoek: 4.1.1
+    resolution:
+      integrity: sha1-4hgj00w21nIATu+jR66MT2BQ49s=
   /ws/1.1.1:
     dependencies:
       options: 0.0.6
@@ -3378,4 +3393,5 @@ specifiers:
   jquery: ^3.2.1
   jquery-ui: ^1.12.1
   materialize-css: ^0.99.0
+  wreck: ^12.2.2
 version: 3

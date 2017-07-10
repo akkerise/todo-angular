@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"
-            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-            crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,14 +27,18 @@
                     <div class="card">
                         <div class="card-content white-text">
                             <span class="card-title">NEW</span>
-                            <input id="inputText" type="text" ng-model="inputTextNew" class="validate"
+                            <input type="text" ng-model="inputTextNew" class="validate"
                                    ng-keypress="($event.keyCode === 13) ? addTask(inputTextNew,'new') : false"
                                    placeholder="Input text here ...">
                         </div>
 
-                        <div id="sortable1" class="connectedSortable">
-                            <div class="collection" ng-repeat="objNew in objNews">
-                                <a class="collection-item">{{ objNew.task }}</a>
+                        <div id="new" class="connectedSortable">
+                            <div class="collection" ng-repeat="new in list.new track by $index">
+                                <a class="collection-item">{{ new }}
+                                    <span class="badge" ng-click="delTask($index, 'new')">
+                                        <i class="small material-icons">delete</i>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -51,9 +53,13 @@
                                    placeholder="Input text here ...">
                         </div>
 
-                        <div id="sortable2" class="connectedSortable">
-                            <div class="collection" ng-repeat="objDoing in objDoings">
-                                <a class="collection-item">{{ objDoing.task }}</a>
+                        <div id="doing" class="connectedSortable">
+                            <div class="collection" ng-repeat="doing in list.doing track by $index">
+                                <a class="collection-item">{{ doing }}
+                                    <span class="badge" ng-click="delTask($index, 'doing')">
+                                        <i class="small material-icons">delete</i>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -67,9 +73,13 @@
                                    ng-keypress="($event.keyCode === 13) ? addTask(inputTextDone, 'done') : false"
                                    placeholder="Input text here ...">
                         </div>
-                        <div id="sortable3" class="connectedSortable" >
-                            <div class="collection" ng-repeat="objDone in objDones">
-                                <a class="collection-item">{{ objDone.task }}</a>
+                        <div id="done" class="connectedSortable">
+                            <div class="collection" ng-repeat="done in list.done track by $index">
+                                <a class="collection-item">{{ done }}
+                                    <span class="badge" ng-click="delTask($index, 'done')">
+                                        <i class="small material-icons">delete</i>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -79,14 +89,16 @@
             <div class="row">
                 <div class="center">
                     <button class="btn btn-flat waves-effect" style="border: 1px solid grey;"
-                            ng-click="elChange(this)">TestClick
+                            ng-click="elChange(this.elChange())">TestClick
                     </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 </body>
 </html>
 
@@ -95,12 +107,15 @@
         $(".connectedSortable").sortable({
             connectWith: ".connectedSortable",
             placeholder: "ui-state-highlight",
-//            start: function (event, ui) {
-//                $(ui.item[0].addClass('dragging'))
-//            },
-//            stop: function (event, ui) {
-//                $(ui.item[0].removeClass('dragging'))
-//            }
+            start: function (event, ui) {
+//                $(ui[0].addClass('dragging'))
+//                console.log($(ui[0]).addClass('dragging'))
+            },
+            stop: function (event, ui) {
+//                console.log(event)
+//                $(ui.children()[0].removeClass('dragging'))
+            }
         });
     });
 </script>
+
