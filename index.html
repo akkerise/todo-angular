@@ -108,8 +108,12 @@
             connectWith: ".connectedSortable",
             placeholder: "ui-state-highlight",
             start: function (event, ui) {
+//                console.log(event);
+//                console.log(ui)
 //                $(ui[0].addClass('dragging'))
 //                console.log($(ui[0]).addClass('dragging'))
+//                let oldColumnType = ui.item.context.parentElement.getAttribute('id');
+                console.log(ui.item);
             },
             stop: function (event, ui) {
 //                console.log(event)

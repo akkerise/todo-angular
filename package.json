@@ -21,6 +21,7 @@
   "homepage": "https://github.com/akkerise/todo-angular#readme",
   "dependencies": {
     "angular": "^1.6.5",
+    "eslint": "^4.2.0",
     "gulp": "^3.9.1",
     "gulp-imagemin": "^3.3.0",
     "gulp-livereload": "^3.8.1",
